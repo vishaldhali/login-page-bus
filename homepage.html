@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="homepagecss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home</title>
 </head>
 <body>
-    
+    <video class="video-background" autoplay muted loop>
+        <source src="backgroundbus.mov" type="video/mp4">
+       
+    </video>
+    <div class="navbar">
+        <div class="logo"><a href="#"> web dev creative</a></div>
+        <ul class="nav-link">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="customatcare.html">Customat Care</a></li>
+            <li><a href="help.html">Help</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+    </ul>
+    <a href="admin.html" class="action_btn">Admin</a>
+    <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+
+    </div>
+    </div>
+    <div class="dropdown_menu">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="customatcare.html">Customat Care</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+        <li><a href="admin.html" class="action_btn">Admin</a></li>
+    </div>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const togglebtnIcon = document.querySelector('.toggle_btn i');
+        const dropdownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function(){
+            dropdownMenu.classList.toggle('open');
+            const isOpen = dropdownMenu.classList.contains('open')
+
+            togglebtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
 </body>
 </html>
